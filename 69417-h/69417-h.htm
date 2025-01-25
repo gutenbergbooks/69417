@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" >
+<title>Grotesque Architecture, by William Wrighte—A Project Gutenberg eBook</title>
+<link rel="icon" href="images/cover.jpg" type="image/x-cover" >
+
+<style>
+div.titlepage, div.plate {
+  margin: 4em auto;
+  text-align: center;
+}
+div.titlepage {
+  font-size: 110%;
+}
+div.plate {
+  font-size: small;
+}
+div.titlepage, div.maintext, div.plate, h2 {
+  page-break-before: always;
+}
+
+p {
+  text-align: justify;
+}
+div.titlepage p {
+  text-align: center;
+  text-indent: 0;
+  margin: 1em auto;
+}
+div.plate p {
+  text-align: right;
+  margin-top: 0.25em;
+}
+div.plate img+p {
+  margin-bottom: 0.1em;
+}
+div.plate p+p {
+  margin-top: 0;
+}
+
+div.maintext {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 32em;
+  font-size: medium;
+}
+div.maintext p {margin-top: 0; }
+div.maintext p.newchap:first-letter {
+  font-size: 300%;
+  line-height: 85%;
+  float: left;
+  margin-right: 0;
+}
+div.maintext p.newchap {text-indent: 0;}
+span.dropcap {text-transform: uppercase; }
+  
+div.titlepagesmaller {
+  margin: 1em auto;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 90%;
+}
+div.titlepagespread {
+  margin: 1em auto;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.poetry-container {
+  text-align: center;
+  margin: 0 auto 1.25em auto;
+  padding-left: 4em; }
+.poetry {
+  display: inline-block;
+  font-size: 125%;
+  text-align: left; }
+.poetry .stanza {
+  padding: 0.5em 2em 0.5em 0;
+  page-break-inside: avoid; }
+.stanza div {
+  margin: 0;
+  text-indent: -3em;
+  padding-left: 3em;
+  line-height: 1.3em; }
+.poetry div.right {
+  text-align: right;
+}
+
+hr.ww {
+  width: 100%;
+  height: 0.25em;
+  margin: 1em auto;
+}
+span.pagenum {
+  display: none; visibility: hidden; /* over-ridden for screen devices */
+  font-size: x-small;
+  font-family: serif;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0;
+  word-spacing: normal;
+  text-indent: 0;
+  text-align: left;
+  margin: 0;
+  padding: .05em 0.5em;
+  }
+a:link {
+  text-decoration: none;
+}
+
+/* for transcriber's note at the end */
+div.tnote {
+  padding: 1em;
+  margin: 6em auto 3em auto;
+  font-family: serif;
+  page-break-after: always;
+}
+div.tnote h2 {
+  text-align: left;
+  text-indent: 0;
+  font-size: large;
+  font-style: normal;
+  margin: 0 auto;
+  line-height: 1;
+  letter-spacing: 0;
+  padding-top: 0.667em;
+  font-weight: bold;
+  border-top: thin solid black;
+}
+div.tnote p {
+  text-align: left;
+  text-indent: 0;
+  margin-top: .5em;
+  font-size: 100%;
+}
+
+.ns {display: none; visibility: hidden; }
+.smcap {font-variant: small-caps; }
+.big {font-size: larger; }
+.nw {white-space: nowrap; }
+
+h1 {
+  font-weight: bold;
+  font-size: 105%;
+  text-align: center;
+  margin: 1em auto;
+  word-spacing: 0.5em;
+  line-height: 1.6;
+}
+div.h1-bookproper {
+  font-weight: bold;
+  font-size: 140%;
+  text-align: center;
+  margin: 2em auto;
+  word-spacing: 0.5em;
+  line-height: 1.6;
+}
+h2.platedesc {
+  font-weight: bold;
+  font-size: 125%;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 1em auto 0.25em auto;
+  letter-spacing: 0.1em;
+  word-spacing: 0.5em;
+  page-break-before: avoid;
+}
+h2 {page-break-after: avoid; }
+
+/* assorted decorative rules */  
+div.hrtp1, div.hrtp2 {
+  width: 100%;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.hrtp1 {
+  height: 16px;
+  background-image: url(images/rule1.jpg);
+  margin: 2em auto;
+}
+div.hrtp2 {
+  height: 18px;
+  background-image: url(images/rule2.jpg);
+  margin: 0.25em auto;
+}
+div.hrtpdbla, div.hrtpdblb, div.hrtpdblc, div.hrtpdbld {
+  width: 8em;
+  text-align: center;
+}
+div.hrtpdbla {
+  border-bottom: thin solid black;
+  padding: 0 0 0.2em 0;
+  margin: 0.5em auto;
+}
+div.hrtpdblb {
+  border-bottom: thick solid black;
+  padding: 0;
+  margin: 0 auto;
+}
+div.hrtpdblc {
+  border-top: thin solid black;
+  padding: 0.2em 0 0 0;
+  margin: 0.5em auto;
+}
+div.hrtpdbld {
+  border-top: thick solid black;
+  padding: 0;
+  margin: 0 auto;
+}
+div.hrdbl {
+  width: 6em;
+  border-top: medium solid black;
+  border-bottom: medium solid black;
+  padding: 0;
+  margin: 1em auto;
+  text-align: center;
+  height: 0.15em;
+}
+div.printer1 {
+  padding: 0.1em 0;
+  border-top: thick solid black;
+  border-bottom: thick solid black;
+  text-align: center;
+  margin: 4em auto;
+  max-width: 18em;
+}
+div.printer2 {
+  padding: 0.25em 0;
+  border-top: thin solid black;
+  border-bottom: thin solid black;
+  font-size: 85%;
+  text-align: center;
+  margin: 0 auto;
+}
+.hrtp1 hr, .hrtp2 hr, .hrtpdblb hr, .hrtpdbld hr, .hrdbl hr, .printer1 hr {
+  display: none;
+  height: 0;
+  border-style: none;
+}
+
+img {
+  margin-left: -12em;
+  margin-right: -12em;
+}
+.floatleft {float: left; }
+p small>small {
+  display: inline-block;
+  padding-bottom: 0.333em;
+}
+#pl0, #pl1, #pl2, #pl3, #pl4, #pl5, #pl6, #pl7, #pl8, #pl9,
+    #pl10, #pl11, #pl12, #pl13, #pl14, #pl15, #pl16, #pl17, #pl18, #pl19,
+    #pl20, #pl21, #pl22, #pl23, #pl24, #pl25, #pl26, #pl27, #pl28 {max-width: 100%; }
+div.plate img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* device-specific differences */
+@media print {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  a:link {
+    color: black;
+    background-color: inherit;
+    text-decoration: none;
+  }
+  a:visited {
+    color: black;
+    background-color: inherit;
+    text-decoration: none;
+  }
+  .maintext p {
+    margin-bottom: 0.25em;
+    text-indent: 2em;
+  }
+  div.plate {
+    margin: 2em -5%;
+  }
+  .nopr {
+    display: none; visibility: hidden;
+  }
+}
+
+@media screen {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  span.pagenum {
+    border-top: thin solid silver;
+    border-bottom: thin solid silver;
+    display: inline;
+    visibility: visible;
+    position: absolute;
+    left: 1%;
+  }
+  div.plate {
+    max-width: 700px;
+    border-bottom: thin solid silver;
+  }
+  p {
+    margin-bottom: 0.75em;
+    text-indent: 0;
+  }
+ /* #pl0 {width: 521px; }  height: 700px; */
+ /* #pl1 {width: 369px; }  height: 700px; */
+ /* #pl2 {width: 411px; }  height: 700px; */
+ /* #pl4 {width: 418px; }  height: 700px; */
+ /* #pl5 {width: 406px; }  height: 700px; */
+ /* #pl6 {width: 409px; }  height: 700px; */
+ /* #pl8 {width: 412px; }  height: 700px; */
+ /* #pl9 {width: 366px; }  height: 700px; */
+ /* #pl10 {width: 395px; }  height: 700px; */
+ /* #pl15 {width: 409px; }  height: 700px; */
+ /* #pl16 {width: 411px; }  height: 700px; */
+ /* #pl19 {width: 460px; }  height: 601px; */
+ /* #pl20 {width: 440px; }  height: 700px; */
+ /* #pl21 {width: 360px; }  height: 700px; */
+ /* #pl22 {width: 377px; }  height: 700px; */
+ /* #pl23 {width: 389px; }  height: 700px; */
+ /* #pl24 {width: 434px; }  height: 700px; */
+ /* #pl26 {width: 418px; }  height: 700px; */
+}
+
+/* overrides for epub */
+/* explicit overrides for styles defined in @media screen
+   because Kindle thinks it's a screen device */
+body.x-ebookmaker {
+  margin-left: 0;
+  margin-right: 0;
+}
+.x-ebookmaker span.pagenum, .x-ebookmaker hr.ww {
+  display: none;
+  visibility: hidden;
+}
+.x-ebookmaker div.maintext p {
+  margin-bottom: 0.25em;
+  text-indent: 1.5em;
+}
+.x-ebookmaker div.maintext p.newchap:first-letter {
+  font-size: 100%;
+  line-height: normal;
+  float: none;
+  margin-right: 0;
+}
+.x-ebookmaker div.hrtp1, .x-ebookmaker div.hrtp2 {
+  background-color: black;
+  height: 0.25em;
+  width: 6em;
+  background-image: none;
+}
+.x-ebookmaker div.plate {
+  max-height: 100%;
+  margin: 0 auto;
+}
+.x-ebookmaker div.plate img {
+  max-height: 90%; /* doesn't work on Kindle or ADE */
+}
+ /* #pl0 {width: 495px; }  height: 95%; */
+ /* #pl1 {width: 185px; }  height: 50%; */
+ /* #pl2 {width: 390px; }  height: 95%; */
+ /* #pl4 {width: 397px; }  height: 95%; */
+ /* #pl5 {width: 386px; }  height: 95%; */
+ /* #pl6 {width: 389px; }  height: 95%; */
+ /* #pl8 {width: 391px; }  height: 95%; */
+ /* #pl9 {width: 348px; }  height: 95%; */
+ /* #pl10 {width: 375px; }  height: 95%; */
+ /* #pl15 {width: 389px; }  height: 95%; */
+ /* #pl16 {width: 390px; }  height: 95%; */
+ /* #pl20 {width: 418px; }  height: 95%; */
+ /* #pl21 {width: 342px; }  height: 95%; */
+ /* #pl22 {width: 358px; }  height: 95%; */
+ /* #pl23 {width: 370px; }  height: 95%; */
+ /* #pl24 {width: 412px; }  height: 95%; */
+ /* #pl26 {width: 397px; }  height: 95%; */
+.x-ebookmaker img {
+  margin-left: 0;
+  margin-right: 0;
+}
+.x-ebookmaker .poetry-container {
+  padding-left: 0.5em;
+}
+.x-ebookmaker .poetry {
+  font-size: 90%;
+}
+.x-ebookmaker .floatleft {padding-right: 10em; }
+/* because ADE doesn't understand auto */
+.x-ebookmaker div.titlepage {
+  max-width: 32em;
+}
+.x-ebookmaker div.hrdbl {margin-left: 36.875%; margin-right: 36.875%; width: 26.25%}
+.x-ebookmaker div.printer1 {margin-left: 21.875%; margin-right: 21.875%; width: 56.25%}
+.x-ebookmaker div.hrtpdbla, .x-ebookmaker div.hrtpdblc {margin-left: 37.5%; margin-right: 37.5%; width: 25%; }
+.x-ebookmaker div.hrtpdblb, .x-ebookmaker div.hrtpdbld {width: 100%; }
+.x-ebookmaker div.hrtp1, .x-ebookmaker div.hrtp2 {margin-left: 40.625%; margin-right: 40.625%; width: 18.75%; }
+
+@media screen {
+  /* restore auto margins for Kindle */
+  div.titlepage {
+    max-width: 100%;
+  }
+  div.hrdbl, div.hrtpdbla, div.hrtpdblc, div.hrtp1,
+    div.hrtp2 {margin-left: auto; margin-right: auto; }
+  div.hrdbl {width: 6em; }
+  div.hrtpdbla, div.hrtpdblc {width: 8em; }
+}
+
+</style>
+</head>
+<body>
+<p style='text-align:center; font-size:1.2em; font-weight:bold'>The Project Gutenberg eBook of Grotesque architecture, by William Wrighte</p>
+<div style='display:block; margin:1em 0'>
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online
+at <a href="https://www.gutenberg.org">www.gutenberg.org</a>. If you
+are not located in the United States, you will have to check the laws of the
+country where you are located before using this eBook.
+</div>
+
+<p style='display:block; margin-top:1em; margin-bottom:0; margin-left:2em; text-indent:-2em'>Title: Grotesque architecture</p>
+<p style='display:block; margin-left:2em; text-indent:0; margin-top:0; margin-bottom:1em;'>or, rural amusement</p>
+<p style='display:block; margin-top:1em; margin-bottom:0; margin-left:2em; text-indent:-2em'>Author: William Wrighte</p>
+<p style='display:block; text-indent:0; margin:1em 0'>Release Date: November 24, 2022 [eBook #69417]</p>
+<p style='display:block; text-indent:0; margin:1em 0'>Language: English</p>
+  <p style='display:block; margin-top:1em; margin-bottom:0; margin-left:2em; text-indent:-2em; text-align:left'>Produced by: Chris Curnow, David Wilson and the Online Distributed Proofreading Team at https://www.pgdp.net (This file was produced from images generously made available by The Internet Archive)</p>
+<div style='margin-top:2em; margin-bottom:4em'>*** START OF THE PROJECT GUTENBERG EBOOK GROTESQUE ARCHITECTURE ***</div>
+
+
+<hr class="ww" >
+
+<div class="plate">
+<h2 class="platedesc" title=""><a id="frontis" href="#frontis"><span class="pagenum"><span
+ class="ns">[</span>frontispiece<span class="ns">]<br
+ ></span></span></a><span class="big">Frontispiece.</span></h2>
+<img src="images/frontis.jpg" id="pl0" alt="extravagant landscaping under construction" >
+<p><small class="floatleft"><i>A. Thornthwaite inv<sup>t</sup>.<!-- TN: abbreviation for latin "invenit" he designed --></i></small>
+           <small><i>Isaac Taylor ſculp.</i></small></p>
+
+</div>
+
+<div class="poetry-container">
+<div class="poetry">
+<div class="stanza">
+<div><i>Where Severn, Trent, or Thames’s Ouzy side</i></div>
+<div><i>Pours the smooth Current of their easy Tide,</i></div>
+<div><i>Each will require a sameneſs to the Spot,</i></div>
+<div><i>For this a Cell, a Cascade or a Grot;</i></div>
+<div><i>The Moſs, or gliding Streams productive Store,</i></div>
+<div><i>To grace the Building on the Verdant Shore,</i></div>
+<div><i>There the rough Tuscan, or the Rustic fix,</i></div>
+<div><i>Or Pebbles, Shells, or calcin’d Matter mix,</i></div>
+<div><i>The frozen Isicles resembled form,</i></div>
+<div><i>Or Sea-green Weed your Grotto must adorn.</i></div>
+</div>
+<div class="right">
+<small>Art of Architecture, <i>a Poem</i>.</small>
+</div><br class="ns" >
+</div>
+</div>
+
+<div class="titlepage">
+
+<h1 title="Grotesque Architecture"><a id="titlepg" href="#titlepg"><span class="pagenum"><span
+ class="ns">[</span>title page<span class="ns">]<br
+ ></span></span></a><span class="big">GROTESQUE ARCHITECTURE;</span><br
+ ><small><small>OR,</small></small><br
+ ><span class="big"><i>RURAL AMUSEMENT:</i></span></h1>
+
+<div class="titlepagespread"><small><small>CONSISTING OF</small></small><br
+ ><span class="big"><b>PLANS, ELEVATIONS, AND SECTIONS,</b></span><br
+ ><small><small>FOR</small></small><br
+ >HUTS, RETREATS, SUMMER AND WINTER HERMITAGES,<br
+ >TERMINARIES,<br
+ ><small><i>CHINESE, GOTHIC, AND NATURAL GROTTOS,</i></small><br
+ >CASCADES, BATHS, MOSQUES, MORESQUE PAVILIONS,<br
+ ><small>GROTESQUE AND RUSTIC SEATS, GREEN-HOUSES, &amp;c.</small></div>
+
+<p><small><small><i>Many of which may be executed with</i></small></small><br
+ ><span class="big"><b>Flints, Irregular Stones, Rude Branches, and<br
+ >Roots of Trees.</b></span></p>
+
+<p><small><small>THE WHOLE CONTAINING</small></small><br
+ ><span class="big"><b>TWENTY-EIGHT NEW DESIGNS,</b></span><br
+ >WITH SCALES TO EACH.</p>
+
+<div class="titlepagespread"><small><small>TO WHICH IS ADDED,</small></small><br
+ ><i>AN EXPLANATION</i>,<br
+ ><small>WITH THE METHOD OF EXECUTING THEM.</small></div>
+
+<div class="hrtpdbla">
+<div class="hrtpdblb">
+&nbsp;<hr >
+</div>
+</div>
+<p><span class="big"><span class="smcap">By WILLIAM WRIGHTE, Architect.</span></span></p>
+<div class="hrtpdblc">
+<div class="hrtpdbld">
+<hr >&nbsp;
+</div>
+</div>
+
+<p>A NEW EDITION.</p>
+
+<div class="hrtp1"><hr ></div>
+
+<div class="titlepagesmaller">
+<p>LONDON:<br
+ ><small><i>Printed by W. Stratford, Crown-Court, Temple-Bar; for</i></small><br
+ ><span class="big">J. TAYLOR,</span><br
+ ><small>AT THE ARCHITECTURAL LIBRARY, NO. 59, HIGH HOLBORN.</small></p>
+</div>
+<div class="hrtp2"><hr ></div>
+
+<span class="big">1815.</span>
+
+</div>
+
+
+<div class="maintext">
+
+<div class="h1-bookproper" title=""><a id="p3" href="#p3"><span class="pagenum"><span
+ class="ns"><br >[p</span>3<span class="ns">]<br
+ ></span></span></a><span class="big">GROTESQUE ARCHITECTURE.</span>
+<div class="hrdbl">
+ &nbsp;<hr ></div>
+</div>
+
+
+<h2 class="platedesc" title="Plate I."><a href="#plI" id="pltI">PLATE I</a>.</h2>
+
+<p class="newchap"><span class="dropcap">Plan</span> and elevation of a hut, to be built with trunks of
+trees and irregular timber. The inside walls may be
+lined with moss, and covered on the top with thatch. It is
+intended to represent the primitive state of the Doric Order,
+and is proper to be placed at the entrance of a wood, or on
+the top of a small eminence. The dimensions are figured
+on the plan.</p>
+
+
+<h2 class="platedesc" title="Plate II."><a href="#plII" id="pltII">PLATE II</a>.</h2>
+
+<p>Plan and elevation of an hermetic retreat, to be composed
+of roots and irregular branches of trees, cemented together
+with a strong binding clay, and may be thatched or covered
+with branches of trees twined round with ivy. The dimensions
+are figured on the plan.</p>
+
+
+<h2 class="platedesc" title="Plate III."><a href="#plIII" id="pltIII">PLATE III</a>.</h2>
+
+<p>Elevation of an hermit’s cell, with rustic seats attached,
+eight feet square in the inside, which should be situated in
+a rising wood near some running water, to be built partly of
+large stones and trunks of trees, set round with ivy, and
+lined with rushes, &amp;c. The roof should be covered with
+thatch, and the floor paved with small pebble stones or
+cockle shells. The seats attached are intended to be composed
+of large irregular stones, roots of <span class="nw">trees, &amp;c.</span></p>
+
+
+<h2 class="platedesc" title="Plate IV."><a href="#plIV" id="pltIV">PLATE IV</a>.</h2>
+
+<p>Plan and elevation for an hermitage, in the eastern style,
+supposed to be built round a tree which supports its roof;
+over the door is a tablet, with an Arabic inscription; the
+roof is covered with thatch, in the Chinese taste; the inside
+to be lined with billet wood and moss. It is lighted from
+the lanterns above. A. should be a couch; B. C. are seats
+of retirement. The dimensions are figured in the plan. The
+rustic seats on the side are intended to be composed of large
+rough stones and roots of pollard trees cemented together.</p>
+
+
+<h2 class="platedesc" title="Plate V."><a id="p4" href="#p4"><span class="pagenum"><span
+ class="ns">[p</span>4<span class="ns">]<br
+ ></span></span></a><a href="#plV" id="pltV">PLATE V</a>.</h2>
+
+<p>Plan and elevation of a winter hermitage, intended as a
+retirement from hunting, fowling, or any other winter amusement;
+the walls to be built of flints or rough stones, and
+lined with wood or other warm substance intermixed with
+moss, and should be situated on a rising ground planted
+with evergreens.</p>
+
+
+<h2 class="platedesc" title="Plate VI."><a href="#plVI" id="pltVI">PLATE VI</a>.</h2>
+
+<p>Plan and elevation of a summer hermitage, designed to be
+in a wilderness or thick wood; the walls to be composed of
+large stones, and the ends faced with flints; the roof covered
+with thatch, and an owl carved on the top; the floor should
+be paved with sheeps<!-- TN: sic --> marrow-bones placed upright, or any
+other pretty devices intermixed with them. A. is for a couch;
+B. C. are seats of retirement.</p>
+
+
+<h2 class="platedesc" title="Plate VII."><a href="#plVII" id="pltVII">PLATE VII</a>.</h2>
+
+<p>Plan and elevation of an hermitage in the Augustine style;
+the front is ornamented with a portico of palm trees; in the
+pediment is a scull, and a tablet with an inscription. A. A.
+are passages of evergreens leading to the two circular retreats,
+one of which is intended as a library, and the other
+a bath; the tops of them are intended to be thatched;
+b b b. are niches for seats cut in the evergreens. This design
+is calculated to be built on a small verdant amphitheatre,
+near a murmuring stream, and as a proper retreat from
+the fatigues of a sultry day.</p>
+
+
+<h2 class="platedesc" title="Plate VIII."><a href="#plVIII" id="pltVIII">PLATE VIII</a>.</h2>
+
+<p>A plan, half an elevation, and half a section, of a rural
+circular hermitage, designed for an open situation near some
+rivulet, planted with weeping willows, &amp;c. The inside is
+lighted by a gazebo, supported by eight trunks of trees
+twined about with ivy. The dimensions are figured on the
+plan.</p>
+
+
+<h2 class="platedesc" title="Plate IX."><a href="#plIX" id="pltIX">PLATE IX</a>.</h2>
+
+<p>Plan, elevation, and section, of a grotto in a modern
+architectonic style, ornamented with jet d’eaux, sea weeds,
+looking-glass, fountains, and other grotesque decorations.
+The dimensions may be known by the scale and the figures
+on the plan.</p>
+
+
+<h2 class="platedesc" title="Plate X."><a href="#plX" id="pltX">PLATE X</a>.</h2>
+
+<p>Plan and elevation of a Gothic grotto, with four closets
+five feet square; the outside to be composed of flints and
+irregular stones, and studded with small pebbles; the inside
+to be ornamented with shells, ores, &amp;c. and if built upon an
+eminence, it would have a very pleasing appearance.</p>
+
+
+<h2 class="platedesc" title="Plate XI."><a id="p5" href="#p5"><span class="pagenum"><span
+ class="ns">[p</span>5<span class="ns">]<br
+ ></span></span></a><a href="#plXI" id="pltXI">PLATE XI</a>.</h2>
+
+<p>Plan and elevation of an open Chinese grotto, to be placed
+at the head of a grand canal, with a bath (A), and a Chinese
+temple (B), attached; the arcades to be ice or frosted work;
+the outside of the bath and temple to be ornamented with
+beautiful shells in the Mosaic taste; the inside to be groined
+over, as on the plan, and ornamented with shell-work and
+other beautiful incrustations. The whole extent is <span class="nw">75 feet.</span></p>
+
+
+<h2 class="platedesc" title="Plate XII."><a href="#plXII" id="pltXII">PLATE XII</a>.</h2>
+
+<p>Plan and measures to plate <a href="#plXIII">xiii</a>. and <a href="#plXIV">xiv</a>.</p>
+
+
+<h2 class="platedesc" title="Plate XIII."><a href="#plXIII" id="pltXIII">PLATE XIII</a>.</h2>
+
+<p>Elevation of a Gothic grotto, with cascades and wings
+attached (<i>see the plan, plate</i> <a href="#plXII">xii</a>.) The entrance is a saloon
+of 20 feet square; the angles are couped with off niches,
+where grotesque statues or vases should be placed. It is
+intended to have a fountain in the centre, with antique figures
+spouting out water; the walls should be lined with flints,
+decorated with ice-work; the whole is lighted from a gazebo
+on the top. A. B. are the plans of the two wings or repositories,
+which are each descended to by a flight of four steps.
+A. is intended to be ornamented with curious shells, gems,
+coral, &amp;c. with statues in the niches. B. is to be groined
+over in the Gothic manner, with a pier in the centre to be
+lined with flints, intermixed with shells, looking-glass, &amp;c.
+The groins should be incrusted with frosted work, in the
+manner of dropping icicles. Both these wings are lighted
+from the rose arches, as appears in the elevation; the outside
+to be composed of rough stones incrusted and studded with
+pebbles, shells, &amp;c. There are placed in the recesses Gothic
+figures. The situation should be in some retired copse,
+shaded by an adjacent hill, near some murmuring rivulet,
+where the cascades, or rather fountains, as in the design,
+may be easily effected. The measures are marked on the
+plan.</p>
+
+
+<h2 class="platedesc" title="Plate XIV."><a href="#plXIV" id="pltXIV">PLATE XIV</a>.</h2>
+
+<p>Elevation of a rural grotto (<i>see the plan, plate</i> <a href="#plXII">xii</a>.) which
+should be built of large rough stones rudely put together, so
+that the building may as near as possible imitate the beautiful
+appearance of nature. If the dome was to be richly ornamented
+with pendentive shell and frosted work, it would
+look very elegant. In the middle niche is Neptune on a
+rock, pouring out water, which descends under the pavement
+through an arch, and forms a running stream. The side
+niches are ornamented with satyrs and other grotesque figures.
+The situation should be in a morass, near some water.</p>
+
+
+<h2 class="platedesc" title="Plate XV."><a id="p6" href="#p6"><span class="pagenum"><span
+ class="ns">[p</span>6<span class="ns">]<br
+ ></span></span></a><a href="#plXV" id="pltXV">PLATE XV</a>.</h2>
+
+<p>A design for a cascade or cataract of a great fall of
+water, decorated with rock-work, sea lions pouring out
+fountains of water; and a triton by way of embellishment,
+in the centre.</p>
+
+
+<h2 class="platedesc" title="Plate XVI."><a href="#plXVI" id="pltXVI">PLATE XVI</a>.</h2>
+
+<p>A design for a triumphal cascade of four falls of water. If
+care is taken to erect this arch with rude and irregular flints,
+&amp;c. at the same time paying a due observance to nature, it
+will have a very magnificent appearance, and look extremely
+elegant; and would be a superb ornament in a
+nobleman’s park where there is a great supply of water.</p>
+
+
+<h2 class="platedesc" title="Plate XVII."><a href="#plXVII" id="pltXVII">PLATE XVII</a>.</h2>
+
+<p>A grotto, canal, and cascade, decorated with rock-work,
+tritons, sybils, &amp;c. pouring forth fountains of water. The
+author hopes he may be indulged with observing, that he
+hath with great pleasure seen a fine piece of water in the
+park of the Earl of <i>Essex</i>, at <i>Cashiobury</i>, near <i>Watford</i>,
+<i>Herts</i>, and flatters himself, that if the arch in this design,
+on which the triton is placed, was to be executed there in
+the nature of a bridge, it would have a very magnificent
+and pleasing appearance.</p>
+
+
+<h2 class="platedesc" title="Plate XVIII."><a href="#plXVIII" id="pltXVIII">PLATE XVIII</a>.</h2>
+
+<p>A romantic bridge, or a cascade of three sheets of water,
+descending through arches of artificial rock-work, incrusted
+with shells, corals, sea-weed, moss, &amp;c. and two sea gods
+lying on their oozy couch, pouring out water.</p>
+
+
+<h2 class="platedesc" title="Plate XIX."><a href="#plXIX" id="pltXIX">PLATE XIX</a>.</h2>
+
+<p>Plan and elevation of a rustic seat for a garden or park,
+intended to terminate a view. It would look very pretty if
+it was built with flints, or irregular rude branches and roots
+of trees.</p>
+
+
+<h2 class="platedesc" title="Plate XX."><a href="#plXX" id="pltXX">PLATE XX</a>.</h2>
+
+<p>Plan and elevation for a grotesque or rural bath, very
+proper to be built in gardens, &amp;c. for the benefit of bathing.
+It is intended to have three seats within, by way of closets,
+for the convenience of dressing and undressing. If the water
+in the plan be left out, it will look very pleasing as a rural
+hut.</p>
+
+
+<h2 class="platedesc" title="Plate XXI."><a href="#plXXI" id="pltXXI">PLATE XXI</a>.</h2>
+
+<p>Plan and elevation of a rural mosque with minarets. It
+is divided into an octagon saloon, supported by eight columns,
+lighted from the dome. The other apartments are four regular
+small rooms or closets, which will serve for various
+<a id="p7" href="#p7"><span class="pagenum"><span
+ class="ns">[p</span>7<span class="ns">] </span></span></a>purposes. The minarets are placed in the plan by way of
+ornament, to shew the true taste of the Turkish buildings;
+and the singularity of the style of architecture is such, that
+will render it a very pleasing ornament, if executed in a
+pleasure ground, or upon an elevated verdant amphitheatre.
+It may be built of wood, and stuccoed; the inside should be
+painted with various rich colours, which would have a pleasing
+and elegant appearance. The dome is supported by
+irregular branches of trees, well connected and cramped together.
+The minarets should be solid, and the pedestals
+(A. B.) should be decorated with Arabic inscriptions. For
+a more intelligible and historical account of these buildings,
+I must refer the reader to Dr. <i>Shaw’s</i> Account of <i>Barbary</i>,
+<i>Le Brun</i> and <i>Tournefort’s</i> Voyage to the <span class="nw"><i>Levant</i>, &amp;c.</span></p>
+
+
+<h2 class="platedesc" title="Plate XXII."><a href="#plXXII" id="pltXXII">PLATE XXII</a>.</h2>
+
+<p>Plan and elevation of a circular mosque twenty feet diameter,
+with four cabinets attached, eight feet square; two
+of which may serve for entrances, having each a small fountain,
+five feet diameter; the other two may be for the purposes
+of study or use. The four minarets at the angles bring
+the plan upon the square of forty feet. The cabinets, as well
+as the mosque, are crowned with domes, which should be
+gilt on the outside. The great dome is supported by eight
+columns, over which are groined arches; an iron balustrade
+runs round the outside, which may be painted blue, and
+gilt; on the top of the great dome is a light cupola, supported
+by eight small columns, from whence hangs a chandelier
+to light the inside when required. The other decorations
+may be seen in the section, plate <a href="#plXXIV">xxiv</a>.</p>
+
+
+<h2 class="platedesc" title="Plate XXIII."><a href="#plXXIII" id="pltXXIII">PLATE XXIII</a>.</h2>
+
+<p>Plan and elevation for another mosque, with two minarets
+attached to the body of the building, which may be executed
+in brick of 14 inches thickness. The front is a portico of
+four columns, in the oriental style, in the centre of which
+is a fountain for sabateons; which may be seen in the section,
+plate <a href="#plXXIV">xxiv</a>. The niches in the front should have Arabic
+inscriptions in gold letters. The portico is covered with
+three little domes, in the Turkish manner, ornamented with
+crescents, &amp;c. The inside is lighted from the circular windows
+and little arches above, which support the dome. For
+the interior decoration, see the section, plate <a href="#plXXIV">xxiv</a>. It
+would look very beautiful if built on an open lawn, planted
+round with a few cypress or other exotic trees. The dimensions
+are figured on the plan.</p>
+
+
+<h2 class="platedesc" title="Plate XXIV."><a id="p8" href="#p8"><span class="pagenum"><span
+ class="ns">[p</span>8<span class="ns">]<br
+ ></span></span></a><a href="#plXXIV" id="pltXXIV">PLATE XXIV</a>.</h2>
+
+<p>Sections and scales to plates <a href="#plXXII">xxii</a>. and <a href="#plXXIII">xxiii</a>.</p>
+
+
+<h2 class="platedesc" title="Plate XXV."><a href="#plXXV" id="pltXXV">PLATE XXV</a>.</h2>
+
+<p>Two plans of moresque temples to plates <a href="#plXXVI">xxvi</a>. and <a href="#plXXVII">xxvii</a>.
+with their proper measures.</p>
+
+
+<h2 class="platedesc" title="Plate XXVI."><a href="#plXXVI" id="pltXXVI">PLATE XXVI</a>.</h2>
+
+<p>Elevation of a beautiful moresque temple (<i>see the plan,
+plate</i> <a href="#plXXV">xxv</a>.) The coupled columns support an arcade of intersecting
+semi-ellipses, which goes quite round the temple.
+In the spandrells are Moors heads, with crescents, roses,
+and stars, over which is a parapet balustrade of net or lattice-work.
+The body of the temple is 20 feet diameter,
+crowned with an open lantern, from whence it is lighted;
+the outside of which is adorned with stars of glass of an
+azure ground. On the top is a pine, which should be double
+gilt; and if the outside was covered with a glossy substance,
+it would have a very pleasing and magnificent appearance.
+The style of architecture is a medium between the Chinese
+and Gothic, having neither the levity of the former nor the
+gravity of the latter. The particularities of both this and
+the following design are taken from those famous remains of
+barbarian antiquity, the palace of <i>Alhambra</i>, at <i>Granada</i>,
+the ancient moresque mosque at <i>Cordova</i>, the old cassavee
+or palace of the <i>Moorish</i> kings at <i>Mæquanez</i>; for the accounts
+of which the reader is referred to <i>Willughbuy’s</i> Travels
+into <i>Spain</i>, <i>Ockley’s</i> Account of South or West <i>Barbary</i>,
+and <i>Shaw’s</i> Travels to the <i>Levant</i>.</p>
+
+
+<h2 class="platedesc" title="Plate XXVII."><a href="#plXXVII" id="pltXXVII">PLATE XXVII</a>.</h2>
+
+<p>Elevation of a moresque pavilion (<i>see the plan, plate</i> <a href="#plXXV">xxv</a>.)
+in the style of the ancient <i>Moors</i>, raised on three steps.
+Over the arches are <i>Moors</i> heads and festoons. In the middle
+is a circular or geometrical staircase, leading to the top, or
+balustrade. It is crowned with a square cupola, mounted
+with a moresque standard; and is very proper to be built on
+an eminence to command an extensive view.</p>
+
+
+<h2 class="platedesc" title="Plate XXVIII."><a href="#plXXVIII" id="pltXXVIII">PLATE XXVIII</a>.</h2>
+
+<p>Plan and elevation for a green-house of the grotesque
+kind, faced with flints and irregular stones. The dimensions
+may be found by the scale.</p>
+
+<div class="printer1">
+<hr >
+<div class="printer2">
+<small>W. Stratford, Printer, Crown-Court, Temple-Bar.</small>
+</div>
+<hr >
+</div>
+
+</div>
+
+
+
+<div class="plate">
+<p id="plI"><i>Plate 1.</i></p>
+<img id="pl1" src="images/plate1.jpg" alt="A Primitive Hut." >
+<p class="nopr"><small><a href="#pltI">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plII"><i>Pl. 2.</i></p>
+<img id="pl2" src="images/plate2.jpg" alt="Hermetic Retreat." >
+<p class="nopr"><small><a href="#pltII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plIII"><i>Pl. 3.</i></p>
+<img id="pl3" src="images/plate3.jpg" alt="Hermit’s Cell." >
+<p class="nopr"><small><a href="#pltIII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plIV"><i>Pl. 4.</i></p>
+<img id="pl4" src="images/plate4.jpg" alt="Oriental Hermitage." >
+<p class="nopr"><small><a href="#pltIV">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plV"><i>Pl. 5.</i></p>
+<img id="pl5" src="images/plate5.jpg" alt="Winter Hermitage" >
+<p class="nopr"><small><a href="#pltV">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plVI"><i>Pl. 6.</i></p>
+<img id="pl6" src="images/plate6.jpg" alt="Summer Hermitage" >
+<p class="nopr"><small><a href="#pltVI">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plVII"><i>Pl. 7.</i></p>
+<img id="pl7" src="images/plate7.jpg" alt="Augustine Hermitage." >
+<p class="nopr"><small><a href="#pltVII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plVIII"><i>Pl. 8.</i></p>
+<img id="pl8" src="images/plate8.jpg" alt="Rural Hermitage." >
+<p class="nopr"><small><a href="#pltVIII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plIX"><i>Pl. 9.</i></p>
+<img id="pl9" src="images/plate9.jpg" alt="Modern Grotto." >
+<p class="nopr"><small><a href="#pltIX">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plX"><i>Pl. 10.</i></p>
+<img id="pl10" src="images/plate10.jpg" alt="Gothic Grotto." >
+<p class="nopr"><small><a href="#pltX">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXI"><i>Pl. 11.</i></p>
+<img id="pl11" src="images/plate11.jpg" alt="Chinese Grotto." >
+<p class="nopr"><small><a href="#pltXI">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXII"><i>Pl. 12.</i></p>
+<img id="pl12" src="images/plate12.jpg" alt="Plan to Plate 13.
+ Plan to Plate 14." >
+<p class="nopr"><small><a href="#pltXII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXIII"><i>Pl. 13.</i></p>
+<img id="pl13" src="images/plate13.jpg" alt="Gothic Grotto, with Cascades &amp; Wings Attached." >
+<p class="nopr"><small><a href="#pltXIII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXIV"><i>Pl. 14.</i></p>
+<img id="pl14" src="images/plate14.jpg" alt="Rural Grotto." >
+<p class="nopr"><small><a href="#pltXIV">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXV"><i>Pl. 15.</i></p>
+<img id="pl15" src="images/plate15.jpg" alt="A Cascade with Fountains" >
+<p class="nopr"><small><a href="#pltXV">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXVI"><i>Pl. 16.</i></p>
+<img id="pl16" src="images/plate16.jpg" alt="Triumphal Cascade." >
+<p class="nopr"><small><a href="#pltXVI">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXVII"><i>Pl. 17.</i></p>
+<img id="pl17" src="images/plate17.jpg" alt="Grotto, Canal, &amp; Cascade." >
+<p class="nopr"><small><a href="#pltXVII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXVIII"><i>Pl. 18.</i></p>
+<img id="pl18" src="images/plate18.jpg" alt="Romantic Arches, with Cascades." >
+<p class="nopr"><small><a href="#pltXVIII">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXIX"><i>Pl. 19.</i></p>
+<img id="pl19" src="images/plate19.jpg" alt="Rustic Seat to Terminate a View." >
+<p class="nopr"><small><a href="#pltXIX">Description</a></small></p>
+</div>
+
+
+
+<div class="plate">
+<p id="plXX"><i>Pl. 20.</i></p>
+<img id="pl20" src="images/plate20.jpg" alt="Grotesque, or Rural Bath." >
+<p class="nopr"><small><a href="#pltXX">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXXI"><i>Pl. 21.</i></p>
+<img id="pl21" src="images/plate21.jpg" alt="Rural Mosque with Minarets." >
+<p class="nopr"><small><a href="#pltXXI">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXXII"><i>Pl. 22.</i></p>
+<img id="pl22" src="images/plate22.jpg" alt="Circular Mosque with Cabinets Attached." >
+<p class="nopr"><small><a href="#pltXXII">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXXIII"><i>Pl. 23.</i></p>
+<img id="pl23" src="images/plate23.jpg" alt="Turkish Mosque with Minarets Attached." >
+<p class="nopr"><small><a href="#pltXXIII">Description</a></small></p>
+</div>
+
+<div class="plate">
+<p id="plXXIV"><i>Pl. 24.</i></p>
+<img id="pl24" src="images/plate24.jpg" alt="Section to Plate 22.
+ Section to Plate 23." >
+<p class="nopr"><small><a href="#pltXXIV">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXXV"><i>Pl. 25.<!-- TN: period invisible in scan --></i></p>
+<img id="pl25" src="images/plate25.jpg" alt="Plan to Plate 27.
+ Plan to Plate 26." >
+<p class="nopr"><small><a href="#pltXXV">Description</a></small></p>
+</div>
+
+
+<div class="plate">
+<p id="plXXVI"><i>Pl. 26.</i></p>
+<img id="pl26" src="images/plate26.jpg" alt="Moresque Temple." >
+<p class="nopr"><small><a href="#pltXXVI">Description</a></small></p>
+</div>
+
+<div class="plate">
+<p id="plXXVII"><i>Pl. 27.</i></p>
+<img id="pl27" src="images/plate27.jpg" alt="Moresque Pavillion." >
+<p class="nopr"><small><a href="#pltXXVII">Description</a></small></p>
+</div>
+
+<div class="plate">
+<p id="plXXVIII"><i>Pl. 28.</i></p>
+<img id="pl28" src="images/plate28.jpg" alt="Green-house." >
+<p class="nopr"><small><a href="#pltXXVIII">Description</a></small></p>
+</div>
+
+
+
+<div class="tnote">
+<h2>Transcriber’s Note</h2>
+
+<p>Inconsistent spelling (icicles/isicles, pavilion/pavillion) and
+hyphenation (sea-weed/sea weed) retained.</p>
+</div>
+
+<hr class="ww" >
+
+
+
+
+<div style='display:block; margin-top:4em'>*** END OF THE PROJECT GUTENBERG EBOOK GROTESQUE ARCHITECTURE ***</div>
+<div style='text-align:left'>
+
+<div style='display:block; margin:1em 0'>
+Updated editions will replace the previous one&#8212;the old editions will
+be renamed.
+</div>
+
+<div style='display:block; margin:1em 0'>
+Creating the works from print editions not protected by U.S. copyright
+law means that no one owns a United States copyright in these works,
+so the Foundation (and you!) can copy and distribute it in the United
+States without permission and without paying copyright
+royalties. Special rules, set forth in the General Terms of Use part
+of this license, apply to copying and distributing Project
+Gutenberg&#8482; electronic works to protect the PROJECT GUTENBERG&#8482;
+concept and trademark. Project Gutenberg is a registered trademark,
+and may not be used if you charge for an eBook, except by following
+the terms of the trademark license, including paying royalties for use
+of the Project Gutenberg trademark. If you do not charge anything for
+copies of this eBook, complying with the trademark license is very
+easy. You may use this eBook for nearly any purpose such as creation
+of derivative works, reports, performances and research. Project
+Gutenberg eBooks may be modified and printed and given away&#8212;you may
+do practically ANYTHING in the United States with eBooks not protected
+by U.S. copyright law. Redistribution is subject to the trademark
+license, especially commercial redistribution.
+</div>
+
+<div style='margin-top:1em; font-size:1.1em; text-align:center'>START: FULL LICENSE</div>
+<div style='text-align:center;font-size:0.9em'>THE FULL PROJECT GUTENBERG LICENSE</div>
+<div style='text-align:center;font-size:0.9em'>PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK</div>
+
+<div style='display:block; margin:1em 0'>
+To protect the Project Gutenberg&#8482; mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase &#8220;Project
+Gutenberg&#8221;), you agree to comply with all the terms of the Full
+Project Gutenberg&#8482; License available with this file or online at
+www.gutenberg.org/license.
+</div>
+
+<div style='display:block; font-size:1.1em; margin:1em 0; font-weight:bold'>
+Section 1. General Terms of Use and Redistributing Project Gutenberg&#8482; electronic works
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.A. By reading or using any part of this Project Gutenberg&#8482;
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement. If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or
+destroy all copies of Project Gutenberg&#8482; electronic works in your
+possession. If you paid a fee for obtaining a copy of or access to a
+Project Gutenberg&#8482; electronic work and you do not agree to be bound
+by the terms of this agreement, you may obtain a refund from the person
+or entity to whom you paid the fee as set forth in paragraph 1.E.8.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.B. &#8220;Project Gutenberg&#8221; is a registered trademark. It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement. There are a few
+things that you can do with most Project Gutenberg&#8482; electronic works
+even without complying with the full terms of this agreement. See
+paragraph 1.C below. There are a lot of things you can do with Project
+Gutenberg&#8482; electronic works if you follow the terms of this
+agreement and help preserve free future access to Project Gutenberg&#8482;
+electronic works. See paragraph 1.E below.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.C. The Project Gutenberg Literary Archive Foundation (&#8220;the
+Foundation&#8221; or PGLAF), owns a compilation copyright in the collection
+of Project Gutenberg&#8482; electronic works. Nearly all the individual
+works in the collection are in the public domain in the United
+States. If an individual work is unprotected by copyright law in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed. Of course, we hope
+that you will support the Project Gutenberg&#8482; mission of promoting
+free access to electronic works by freely sharing Project Gutenberg&#8482;
+works in compliance with the terms of this agreement for keeping the
+Project Gutenberg&#8482; name associated with the work. You can easily
+comply with the terms of this agreement by keeping this work in the
+same format with its attached full Project Gutenberg&#8482; License when
+you share it without charge with others.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.D. The copyright laws of the place where you are located also govern
+what you can do with this work. Copyright laws in most countries are
+in a constant state of change. If you are outside the United States,
+check the laws of your country in addition to the terms of this
+agreement before downloading, copying, displaying, performing,
+distributing or creating derivative works based on this work or any
+other Project Gutenberg&#8482; work. The Foundation makes no
+representations concerning the copyright status of any work in any
+country other than the United States.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E. Unless you have removed all references to Project Gutenberg:
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.1. The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg&#8482; License must appear
+prominently whenever any copy of a Project Gutenberg&#8482; work (any work
+on which the phrase &#8220;Project Gutenberg&#8221; appears, or with which the
+phrase &#8220;Project Gutenberg&#8221; is associated) is accessed, displayed,
+performed, viewed, copied or distributed:
+</div>
+
+<blockquote>
+  <div style='display:block; margin:1em 0'>
+    This eBook is for the use of anyone anywhere in the United States and most
+    other parts of the world at no cost and with almost no restrictions
+    whatsoever. You may copy it, give it away or re-use it under the terms
+    of the Project Gutenberg License included with this eBook or online
+    at <a href="https://www.gutenberg.org">www.gutenberg.org</a>. If you
+    are not located in the United States, you will have to check the laws
+    of the country where you are located before using this eBook.
+  </div>
+</blockquote>
+
+<div style='display:block; margin:1em 0'>
+1.E.2. If an individual Project Gutenberg&#8482; electronic work is
+derived from texts not protected by U.S. copyright law (does not
+contain a notice indicating that it is posted with permission of the
+copyright holder), the work can be copied and distributed to anyone in
+the United States without paying any fees or charges. If you are
+redistributing or providing access to a work with the phrase &#8220;Project
+Gutenberg&#8221; associated with or appearing on the work, you must comply
+either with the requirements of paragraphs 1.E.1 through 1.E.7 or
+obtain permission for the use of the work and the Project Gutenberg&#8482;
+trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.3. If an individual Project Gutenberg&#8482; electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any
+additional terms imposed by the copyright holder. Additional terms
+will be linked to the Project Gutenberg&#8482; License for all works
+posted with the permission of the copyright holder found at the
+beginning of this work.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg&#8482;
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg&#8482;.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.5. Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg&#8482; License.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.6. You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form. However, if you provide access
+to or distribute copies of a Project Gutenberg&#8482; work in a format
+other than &#8220;Plain Vanilla ASCII&#8221; or other format used in the official
+version posted on the official Project Gutenberg&#8482; website
+(www.gutenberg.org), you must, at no additional cost, fee or expense
+to the user, provide a copy, a means of exporting a copy, or a means
+of obtaining a copy upon request, of the work in its original &#8220;Plain
+Vanilla ASCII&#8221; or other form. Any alternate format must include the
+full Project Gutenberg&#8482; License as specified in paragraph 1.E.1.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.7. Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg&#8482; works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.8. You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg&#8482; electronic works
+provided that:
+</div>
+
+<div style='margin-left:0.7em;'>
+    <div style='text-indent:-0.7em'>
+        &#8226; You pay a royalty fee of 20% of the gross profits you derive from
+        the use of Project Gutenberg&#8482; works calculated using the method
+        you already use to calculate your applicable taxes. The fee is owed
+        to the owner of the Project Gutenberg&#8482; trademark, but he has
+        agreed to donate royalties under this paragraph to the Project
+        Gutenberg Literary Archive Foundation. Royalty payments must be paid
+        within 60 days following each date on which you prepare (or are
+        legally required to prepare) your periodic tax returns. Royalty
+        payments should be clearly marked as such and sent to the Project
+        Gutenberg Literary Archive Foundation at the address specified in
+        Section 4, &#8220;Information about donations to the Project Gutenberg
+        Literary Archive Foundation.&#8221;
+    </div>
+
+    <div style='text-indent:-0.7em'>
+        &#8226; You provide a full refund of any money paid by a user who notifies
+        you in writing (or by e-mail) within 30 days of receipt that s/he
+        does not agree to the terms of the full Project Gutenberg&#8482;
+        License. You must require such a user to return or destroy all
+        copies of the works possessed in a physical medium and discontinue
+        all use of and all access to other copies of Project Gutenberg&#8482;
+        works.
+    </div>
+
+    <div style='text-indent:-0.7em'>
+        &#8226; You provide, in accordance with paragraph 1.F.3, a full refund of
+        any money paid for a work or a replacement copy, if a defect in the
+        electronic work is discovered and reported to you within 90 days of
+        receipt of the work.
+    </div>
+
+    <div style='text-indent:-0.7em'>
+        &#8226; You comply with all other terms of this agreement for free
+        distribution of Project Gutenberg&#8482; works.
+    </div>
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.E.9. If you wish to charge a fee or distribute a Project
+Gutenberg&#8482; electronic work or group of works on different terms than
+are set forth in this agreement, you must obtain permission in writing
+from the Project Gutenberg Literary Archive Foundation, the manager of
+the Project Gutenberg&#8482; trademark. Contact the Foundation as set
+forth in Section 3 below.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.1. Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+works not protected by U.S. copyright law in creating the Project
+Gutenberg&#8482; collection. Despite these efforts, Project Gutenberg&#8482;
+electronic works, and the medium on which they may be stored, may
+contain &#8220;Defects,&#8221; such as, but not limited to, incomplete, inaccurate
+or corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged disk or
+other medium, a computer virus, or computer codes that damage or
+cannot be read by your equipment.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the &#8220;Right
+of Replacement or Refund&#8221; described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg&#8482; trademark, and any other party distributing a Project
+Gutenberg&#8482; electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from. If you
+received the work on a physical medium, you must return the medium
+with your written explanation. The person or entity that provided you
+with the defective work may elect to provide a replacement copy in
+lieu of a refund. If you received the work electronically, the person
+or entity providing it to you may choose to give you a second
+opportunity to receive the work electronically in lieu of a refund. If
+the second copy is also defective, you may demand a refund in writing
+without further opportunities to fix the problem.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.4. Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you &#8216;AS-IS&#8217;, WITH NO
+OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.5. Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law. The invalidity or
+unenforceability of any provision of this agreement shall not void the
+remaining provisions.
+</div>
+
+<div style='display:block; margin:1em 0'>
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg&#8482; electronic works in
+accordance with this agreement, and any volunteers associated with the
+production, promotion and distribution of Project Gutenberg&#8482;
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of this
+or any Project Gutenberg&#8482; work, (b) alteration, modification, or
+additions or deletions to any Project Gutenberg&#8482; work, and (c) any
+Defect you cause.
+</div>
+
+<div style='display:block; font-size:1.1em; margin:1em 0; font-weight:bold'>
+Section 2. Information about the Mission of Project Gutenberg&#8482;
+</div>
+
+<div style='display:block; margin:1em 0'>
+Project Gutenberg&#8482; is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers. It
+exists because of the efforts of hundreds of volunteers and donations
+from people in all walks of life.
+</div>
+
+<div style='display:block; margin:1em 0'>
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg&#8482;&#8217;s
+goals and ensuring that the Project Gutenberg&#8482; collection will
+remain freely available for generations to come. In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg&#8482; and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation information page at www.gutenberg.org.
+</div>
+
+<div style='display:block; font-size:1.1em; margin:1em 0; font-weight:bold'>
+Section 3. Information about the Project Gutenberg Literary Archive Foundation
+</div>
+
+<div style='display:block; margin:1em 0'>
+The Project Gutenberg Literary Archive Foundation is a non-profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service. The Foundation&#8217;s EIN or federal tax identification
+number is 64-6221541. Contributions to the Project Gutenberg Literary
+Archive Foundation are tax deductible to the full extent permitted by
+U.S. federal laws and your state&#8217;s laws.
+</div>
+
+<div style='display:block; margin:1em 0'>
+The Foundation&#8217;s business office is located at 809 North 1500 West,
+Salt Lake City, UT 84116, (801) 596-1887. Email contact links and up
+to date contact information can be found at the Foundation&#8217;s website
+and official page at www.gutenberg.org/contact
+</div>
+
+<div style='display:block; font-size:1.1em; margin:1em 0; font-weight:bold'>
+Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
+</div>
+
+<div style='display:block; margin:1em 0'>
+Project Gutenberg&#8482; depends upon and cannot survive without widespread
+public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine-readable form accessible by the widest
+array of equipment including outdated equipment. Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+</div>
+
+<div style='display:block; margin:1em 0'>
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States. Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements. We do not solicit donations in locations
+where we have not received written confirmation of compliance. To SEND
+DONATIONS or determine the status of compliance for any particular state
+visit <a href="https://www.gutenberg.org/donate/">www.gutenberg.org/donate</a>.
+</div>
+
+<div style='display:block; margin:1em 0'>
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+</div>
+
+<div style='display:block; margin:1em 0'>
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States. U.S. laws alone swamp our small staff.
+</div>
+
+<div style='display:block; margin:1em 0'>
+Please check the Project Gutenberg web pages for current donation
+methods and addresses. Donations are accepted in a number of other
+ways including checks, online payments and credit card donations. To
+donate, please visit: www.gutenberg.org/donate
+</div>
+
+<div style='display:block; font-size:1.1em; margin:1em 0; font-weight:bold'>
+Section 5. General Information About Project Gutenberg&#8482; electronic works
+</div>
+
+<div style='display:block; margin:1em 0'>
+Professor Michael S. Hart was the originator of the Project
+Gutenberg&#8482; concept of a library of electronic works that could be
+freely shared with anyone. For forty years, he produced and
+distributed Project Gutenberg&#8482; eBooks with only a loose network of
+volunteer support.
+</div>
+
+<div style='display:block; margin:1em 0'>
+Project Gutenberg&#8482; eBooks are often created from several printed
+editions, all of which are confirmed as not protected by copyright in
+the U.S. unless a copyright notice is included. Thus, we do not
+necessarily keep eBooks in compliance with any particular paper
+edition.
+</div>
+
+<div style='display:block; margin:1em 0'>
+Most people start at our website which has the main PG search
+facility: <a href="https://www.gutenberg.org">www.gutenberg.org</a>.
+</div>
+
+<div style='display:block; margin:1em 0'>
+This website includes information about Project Gutenberg&#8482;,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+</div>
+
+</div>
+</body>
+</html>
